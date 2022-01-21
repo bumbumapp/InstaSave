@@ -18,9 +18,6 @@
 ## Description
 Download or repost public instagram posts easily by selecting "Copy Link" in Instagram.
 
-## Download
-* Google Play: https://play.google.com/store/apps/details?id=net.schueller.instarepost
-* F-Droid: https://f-droid.org/packages/net.schueller.instarepost/
 
 ## Help Translate
 * https://hosted.weblate.org/projects/easyrepost/
