@@ -1,5 +1,5 @@
 <h1 align="center">
-  Easy Repost and Downloader for Instagram
+  Insta Save and Repost
 </h1>
 
 <p align="center">
@@ -19,8 +19,7 @@
 Download or repost public instagram posts easily by selecting "Copy Link" in Instagram.
 
 
-## Help Translate
-* https://hosted.weblate.org/projects/easyrepost/
+
 
 ## Features
 * Download or Repost Images and Videos
