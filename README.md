@@ -18,8 +18,7 @@ Download or repost public instagram posts easily by selecting "Copy Link" in Ins
 
 ## Screenshots
 
-![1642638403130](https://user-images.githubusercontent.com/96938939/150535780-5a81127f-9328-44c2-9529-de8a87b095dd.jpg)
-![1642638403122](https://user-images.githubusercontent.com/96938939/150535807-ce19406c-20e8-43d3-8a65-ed8158dcd0c1.jpg
+
 
 ## Features
 * Download or Repost Images and Videos
