@@ -79,6 +79,7 @@ import net.schueller.instarepost.InstarepostApplication;
 import net.schueller.instarepost.ui.ItemClickSupport;
 import net.schueller.instarepost.models.Post;
 import net.schueller.instarepost.R;
+import net.schueller.instarepost.helpers.Util;
 import net.schueller.instarepost.adapters.PostAdapter;
 import net.schueller.instarepost.receivers.RepostReceiver;
 import net.schueller.instarepost.receivers.ShareReceiver;
@@ -116,6 +117,10 @@ public class MainActivity extends AppCompatActivity {
 
     //persmission method.
     public static void verifyStoragePermissions(Activity activity) {
+        // Media is stored in the app-specific external dir: no storage permission needed on 10+.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            return;
+        }
         // Check if we have read or write permission
         int writePermission = ActivityCompat
                 .checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -414,9 +419,9 @@ public class MainActivity extends AppCompatActivity {
                                             // Clicking on items
                                             Post post = rvAdapter.getItem(position2);
                                             // delete post.filePath
-                                            File file = new File(filePath + post.getImageFile());
+                                            File file = Util.getFullFilePath(post.getImageFile(), getApplicationContext());
                                             if (!file.delete()) {
-                                                Log.e(TAG, "File Delete failed. " + filePath + post.getImageFile());
+                                                Log.e(TAG, "File Delete failed. " + file.getPath());
                                             }
                                             rvAdapter.removeAt(position2);
                                             rvAdapter.notifyItemRemoved(position2);

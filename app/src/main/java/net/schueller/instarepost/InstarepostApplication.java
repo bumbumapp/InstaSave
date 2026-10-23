@@ -28,6 +28,8 @@ public class InstarepostApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        // Android 15+ draws edge-to-edge: pad activity content by the system bar insets.
+        EdgeToEdgeCallbacks.register(this);
         FlowManager.init(new FlowConfig.Builder(this).build());
     }
 }

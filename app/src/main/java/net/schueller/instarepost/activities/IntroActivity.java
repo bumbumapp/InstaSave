@@ -22,8 +22,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.github.paolorotolo.appintro.AppIntro2;
-import com.github.paolorotolo.appintro.AppIntroFragment;
+import com.github.appintro.AppIntro2;
+import com.github.appintro.AppIntroFragment;
 
 import net.schueller.instarepost.R;
 
@@ -59,8 +59,8 @@ public class IntroActivity extends AppIntro2 {
         //setSeparatorColor(Color.parseColor("#2196F3"));
 
         // Hide Skip/Done button.
-        showSkipButton(true);
-        setProgressButtonEnabled(true);
+        setSkipButtonEnabled(true);
+        setButtonsEnabled(true);
 
         // Turn vibration on and set intensity.
         // NOTE: you will probably need to ask VIBRATE permission in Manifest.
@@ -69,21 +69,21 @@ public class IntroActivity extends AppIntro2 {
     }
 
     @Override
-    public void onSkipPressed(Fragment currentFragment) {
+    protected void onSkipPressed(@Nullable Fragment currentFragment) {
         super.onSkipPressed(currentFragment);
         // Do something when users tap on Skip button.
         finish();
     }
 
     @Override
-    public void onDonePressed(Fragment currentFragment) {
+    protected void onDonePressed(@Nullable Fragment currentFragment) {
         super.onDonePressed(currentFragment);
         // Do something when users tap on Done button.
         finish();
     }
 
     @Override
-    public void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
+    protected void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
         super.onSlideChanged(oldFragment, newFragment);
         // Do something when the slide changes.
     }
